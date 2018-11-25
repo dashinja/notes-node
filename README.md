@@ -5,40 +5,47 @@ are accessed via the command line. This project is an exercise
 in completing what I start as well as newer concepts made applicable.
 
 ## Format to Access Application
-> node app.js <command>
+> node app.js {command}
 
 ## Commands:
-  add     Add a new note
-  list    Lists all notes
-  read    Reads a note
-  remove  Deletes a note
+  [add]     - Add a new note
+  
+  [list]    - Lists all notes
+  
+  [read]    - Reads a note
+  
+  [remove]  - Deletes a note
 
 ### Options:
-  --help  Show help 
+  --help    - Show help 
   
 
 ## How to Create Notes
-> node app.js add -t <noteTitle> -b <noteContent>
+> node app.js add -t -b
 
 ### Options:
-  --help       Show help                                               [boolean]
-  --title, -t  Title of Note                                          [required]
-  --body, -b   Body of Note                                           [required]
+  [--help]  - Show help
+  
+  [--title], [-t] - Title of Note  - [required]
+  
+  [--body], [-b]  - Body of Note - [required]
   
 
 ## How to List All Notes
 > node app.js list
 
 ## How to Read a Note
-> node app.js read -t <noteTitle>
+> node app.js read -t
 
 ### Options:
-  --help       Show help                                               [boolean]
-  --title, -t  Title of Note                                          [required]
+  [--help]  - Show help
+  
+  [--title], [-t] - Title of Note  - [required]
   
 ## How to Remove a Note
-> node app.js remove -t <noteTitle>
+> node app.js remove -t
 
 ### Options:
-  --help       Show help                                               [boolean]
-  --title, -t  Title of Note                                          [required]
+  [--help]  - Show help
+  
+  [--title], [-t] - Title of Note  - [required]
