@@ -17,7 +17,7 @@ in completing what I start as well as newer concepts made applicable.
   [remove]  - Deletes a note
 
 ### Options:
-  --help    - Show help 
+  [--help]    - Show help 
   
 
 ## How to Create Notes
