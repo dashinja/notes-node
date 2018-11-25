@@ -21,7 +21,7 @@ in completing what I start as well as newer concepts made applicable.
   
 
 ## How to Create Notes
-> node app.js add -t -b
+> node app.js add -t="insert text" -b="insert text"
 
 ### Options:
   [--help]  - Show help
@@ -35,7 +35,7 @@ in completing what I start as well as newer concepts made applicable.
 > node app.js list
 
 ## How to Read a Note
-> node app.js read -t
+> node app.js read -t="insert text"
 
 ### Options:
   [--help]  - Show help
@@ -43,7 +43,7 @@ in completing what I start as well as newer concepts made applicable.
   [--title], [-t] - Title of Note  - [required]
   
 ## How to Remove a Note
-> node app.js remove -t
+> node app.js remove -t="insert text"
 
 ### Options:
   [--help]  - Show help
