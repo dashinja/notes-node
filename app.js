@@ -17,7 +17,11 @@ const bodyOptions = {
 };
 
 const argv = yargs
-  .command('add', 'Add a new note', {
+  .command('add' || 'create', 'Add a new note', {
+    title: titleOptions,
+    body: bodyOptions
+  })
+  .command('create', 'Add a new note', {
     title: titleOptions,
     body: bodyOptions
   })
@@ -30,21 +34,21 @@ const argv = yargs
   })
   .help().argv;
 
-let command = argv._[0];
+const command = argv._[0];
 
-if (command === 'add') {
-  let note = notes.addNote(argv.title, argv.body);
+if (command === 'add' || command === 'create') {
+  const note = notes.addNote(argv.title, argv.body);
   if (note === undefined) {
     console.log('Please select unique title for new notes.');
   } else {
     notes.logNote(note);
   }
 } else if (command === 'list') {
-  let allNotes = notes.getAll();
+  const allNotes = notes.getAll();
   console.log(`Printing ${allNotes.length} note(s).`);
   allNotes.forEach(note => notes.logNote(note));
 } else if (command === 'read') {
-  let note = notes.getNote(argv.title);
+  const note = notes.getNote(argv.title);
 
   if (note) {
     notes.logNote(note);
@@ -52,8 +56,8 @@ if (command === 'add') {
     console.log(`Note not found`);
   }
 } else if (command === 'remove') {
-  let noteRemoved = notes.removeNote(argv.title);
-  let message = noteRemoved ? 'Note was removed' : 'Note Removal Failed';
+  const noteRemoved = notes.removeNote(argv.title);
+  const message = noteRemoved ? 'Note was removed' : 'Note Removal Failed';
   console.log(message);
 } else {
   console.log('Command not recognized');
