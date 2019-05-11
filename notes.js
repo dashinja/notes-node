@@ -19,10 +19,12 @@ let saveNotes = notes => {
 
 let addNote = (title, body) => {
   let notes = fetchNotes();
+
   let note = {
     title,
     body
   };
+
   let duplicateNotes = notes.filter(note => note.title === title);
 
   if (duplicateNotes.length === 0) {
@@ -53,6 +55,7 @@ let removeNote = title => {
   // Test whether the removeNote operation was successful
   return notes.length !== notesToKeep.length;
 };
+
 let logNote = note => {
   // Break on this line and use repl to output note
   // Use read command with --title, yeah this is kool!
